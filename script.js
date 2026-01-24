@@ -433,5 +433,79 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Parallax effect removed - image now scrolls normally
 
+    // ===================================
+    // MOBILE-SPECIFIC ENHANCEMENTS
+    // ===================================
+
+    // Fix viewport height on mobile browsers (accounts for address bar)
+    function setVH() {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+
+    setVH();
+    window.addEventListener('resize', setVH);
+    window.addEventListener('orientationchange', setVH);
+
+    // Prevent body scroll when sidebar is open on mobile
+    const body = document.body;
+    const observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
+            if (mutation.attributeName === 'class') {
+                if (sidebar.classList.contains('active') && window.innerWidth <= 768) {
+                    body.style.overflow = 'hidden';
+                } else {
+                    body.style.overflow = '';
+                }
+            }
+        });
+    });
+
+    observer.observe(sidebar, { attributes: true });
+
+    // Improve touch scrolling on iOS
+    if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+        document.body.style.webkitOverflowScrolling = 'touch';
+    }
+
+    // Add active state for touch devices
+    if ('ontouchstart' in window) {
+        const touchElements = document.querySelectorAll('.nav-link, .cta-button, .project-button, .submit-button');
+        touchElements.forEach(element => {
+            element.addEventListener('touchstart', function () {
+                this.style.opacity = '0.8';
+            });
+            element.addEventListener('touchend', function () {
+                this.style.opacity = '1';
+            });
+        });
+    }
+
+    // Close sidebar on orientation change
+    window.addEventListener('orientationchange', function () {
+        if (sidebar.classList.contains('active')) {
+            sidebar.classList.remove('active');
+            sidebarToggle.classList.remove('active');
+        }
+    });
+
+    // Smooth scroll polyfill for older mobile browsers
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === '#') return;
+
+            const target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                const offsetTop = target.offsetTop;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
     console.log('Portfolio website initialized successfully! 🚀');
 });
