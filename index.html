@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio website of an MCA student showcasing skills, projects, and contact information">
+    <title>My Portfolio | MCA Student</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Sidebar Toggle Button -->
+    <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle Sidebar">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Portfolio</h2>
+            <button class="sidebar-close" id="sidebarClose" aria-label="Close Sidebar">
+                <span>×</span>
+            </button>
+
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+            <li><a href="#about" class="nav-link" data-section="about">About Me</a></li>
+            <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+            <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+            <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+            <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Floating Theme Switcher -->
+        <div class="theme-switcher-floating">
+            <button class="theme-btn active" data-theme="light" title="Light Mode">☀️</button>
+            <button class="theme-btn" data-theme="dark-soft" title="Dark Soft">🌙</button>
+            <button class="theme-btn" data-theme="dark-gaming" title="Dark Gaming">🎮</button>
+        </div>
+        <!-- Home Section -->
+        <section id="home" class="section home-section">
+            <div class="profile-container">
+                <div class="puzzle-background" id="puzzleBackground"></div>
+                <img src="Shubham_Photo.jpeg" alt="Profile Photo" class="profile-photo">
+            </div>
+            <div class="intro-text">
+                <h1 class="greeting">Hello, I'm <span class="highlight">Shubham Prajapati</span></h1>
+                <p class="tagline">MCA Student | Aspiring Software Developer</p>
+                <p class="description">Passionate about creating innovative solutions and building impactful
+                    applications.</p>
+                <a href="#contact" class="cta-button">Get In Touch</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="section-container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I'm a passionate software developer with a strong focus on creating innovative solutions and
+                            building impactful applications. My expertise spans across web development, data structures,
+                            and modern technologies.</p>
+                        <p>My journey in computer science has equipped me with problem-solving skills and a deep
+                            understanding of programming fundamentals. I'm constantly learning and exploring new
+                            technologies to stay ahead in this ever-evolving field.</p>
+                        <p>When I'm not coding, you can find me exploring new tech trends, participating in hackathons,
+                            or contributing to open-source projects.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <h3>Focus Areas</h3>
+                            <p>Web Development, DSA, Software Engineering</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Interests</h3>
+                            <p>AI/ML, Cloud Computing, Mobile Apps</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Approach</h3>
+                            <p>Clean Code, Best Practices, Continuous Learning</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section education-section">
+            <div class="section-container">
+                <h2 class="section-title">Education</h2>
+                <div class="education-grid">
+                    <div class="education-card">
+                        <div class="education-content">
+                            <h3 class="degree">Master of Computer Applications (MCA)</h3>
+                            <p class="institution">Dr. Shakuntala Mishra National Rehabilitation University</p>
+                            <p class="year">2025 – 2027 (Pursuing)</p>
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <div class="education-content">
+                            <h3 class="degree">Bachelor of Computer Applications (BCA)</h3>
+                            <p class="institution">University of Lucknow</p>
+                            <p class="year">2024</p>
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <div class="education-content">
+                            <h3 class="degree">Senior Secondary (XII – ISC)</h3>
+                            <p class="institution">St. Mary's School, Bhadohi</p>
+                            <p class="year">2020</p>
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <div class="education-content">
+                            <h3 class="degree">Secondary (X – ICSE)</h3>
+                            <p class="institution">St. Mary's School, Bhadohi</p>
+                            <p class="year">2018</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="section-container">
+                <h2 class="section-title">My Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon">💻</div>
+                        <h3>Programming Languages</h3>
+                        <p>Java, Python, C++, JavaScript</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🌐</div>
+                        <h3>Web Development</h3>
+                        <p>HTML, CSS, JavaScript, React, Node.js</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🗄️</div>
+                        <h3>Databases</h3>
+                        <p>MySQL, MongoDB, PostgreSQL</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🛠️</div>
+                        <h3>Tools & Technologies</h3>
+                        <p>Git, Docker, VS Code, Linux</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">📊</div>
+                        <h3>Data Structures & Algorithms</h3>
+                        <p>Arrays, Trees, Graphs, Dynamic Programming</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🎨</div>
+                        <h3>Design & UI/UX</h3>
+                        <p>Figma, Responsive Design, User Experience</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="section-container">
+                <h2 class="section-title">My Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>E-Commerce Platform</h3>
+                            <span class="project-tag">Web Development</span>
+                        </div>
+                        <p class="project-description">A full-stack e-commerce application with user authentication,
+                            product catalog, shopping cart, and payment integration.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">Node.js</span>
+                            <span class="tech-badge">MongoDB</span>
+                        </div>
+                        <button class="project-button">View Project</button>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>Task Management App</h3>
+                            <span class="project-tag">Productivity</span>
+                        </div>
+                        <p class="project-description">A responsive task management application with drag-and-drop
+                            functionality, deadlines, and priority levels.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">HTML/CSS</span>
+                            <span class="tech-badge">LocalStorage</span>
+                        </div>
+                        <button class="project-button">View Project</button>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>Weather Forecast App</h3>
+                            <span class="project-tag">API Integration</span>
+                        </div>
+                        <p class="project-description">Real-time weather application that fetches data from external
+                            APIs and displays forecasts with beautiful UI.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">REST API</span>
+                            <span class="tech-badge">CSS3</span>
+                        </div>
+                        <button class="project-button">View Project</button>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>Student Portal System</h3>
+                            <span class="project-tag">Full Stack</span>
+                        </div>
+                        <p class="project-description">A comprehensive student management system with attendance
+                            tracking, grade management, and course enrollment.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Django</span>
+                            <span class="tech-badge">MySQL</span>
+                        </div>
+                        <button class="project-button">View Project</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="section-container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Let's Connect</h3>
+                        <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of
+                            your vision.</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <span class="contact-icon">📧</span>
+                                <span>Shubhammmprajapat95@gmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">📱</span>
+                                <span>+91 6391396003</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">📍</span>
+                                <span>Lucknow, India</span>
+                            </div>
+                        </div>
+
+                        <!-- Google Map Embed -->
+                        <div class="contact-map-container">
+                            <iframe src="https://maps.google.com/maps?q=26.8590625,80.8684375&z=18&output=embed"
+                                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Your message here..."
+                                required></textarea>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
+                        <button type="submit" class="submit-button" id="submitButton">Send Message</button>
+                        <div class="success-message" id="successMessage">Thank you! Your message has been sent
+                            successfully.</div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
