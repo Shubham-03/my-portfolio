@@ -1023,8 +1023,8 @@ body[data-theme="dark-gaming"] .contact-map-container iframe {
 
 .success-message {
     display: none;
-    background: #27ae60;
-    color: white;
+    background: #7ad7a1;
+    color: rgb(0, 0, 0);
     padding: 1rem;
     border-radius: 12px;
     text-align: center;
